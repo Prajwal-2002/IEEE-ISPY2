@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles3.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>.. -. ... .--. . -.-. -</h1>
+      </header>
+      <form class="wordle-form" onsubmit="validateAnswer(event)">
+        <input
+          type="text"
+          class="round-input"
+          id="answerInput"
+          placeholder="Enter your text"
+        />
+        <button type="submit" class="submit-btn">Go back</button>
+      </form>
+    </div>
+
+    <script>
+      function validateAnswer(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        var answer = document
+          .getElementById("answerInput")
+          .value.trim()
+          .toUpperCase();
+
+        window.location.href = "page2.html";
+      }
+    </script>
+  </body>
+</html>
